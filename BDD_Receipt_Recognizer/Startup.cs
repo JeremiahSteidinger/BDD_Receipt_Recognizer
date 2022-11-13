@@ -32,7 +32,7 @@ namespace BDD_Receipt_Recognizer
 
             #region Azure Form Recognizer Client
             string endpoint = Environment.GetEnvironmentVariable("FormRecongizerEndpoint");
-            string key = Environment.GetEnvironmentVariable("FormRecongizerKey");
+            string key = Environment.GetEnvironmentVariable("FormRecognizerKey");
             AzureKeyCredential credential = new AzureKeyCredential(key);
 
             builder.Services.AddSingleton(new DocumentAnalysisClient(new Uri(endpoint), credential));
