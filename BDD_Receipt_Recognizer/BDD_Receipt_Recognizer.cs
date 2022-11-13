@@ -27,7 +27,7 @@ namespace BDD_Receipt_Recognizer
         }
 
         [FunctionName("BDD_Receipt_Recognizer")]
-        public async Task Run([BlobTrigger("/{name}", Connection = "")] Stream receiptBlob, string name, ILogger log)
+        public async Task Run([BlobTrigger("receipts/{name}", Connection = "")] Stream receiptBlob, string name, ILogger log)
         {
             ReceiptRecognizer receiptRecognizer = new ReceiptRecognizer(_documentAnalysisClient);
 
