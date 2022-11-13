@@ -43,8 +43,6 @@ namespace BDD_Receipt_Recognizer
             string queueStraogeQueueName = Environment.GetEnvironmentVariable("QueueStorageQueueName");
             builder.Services.AddSingleton(new QueueClient(queueStorageConnectionString, queueStraogeQueueName));
             #endregion
-
-            //test
         }
     }
 }
