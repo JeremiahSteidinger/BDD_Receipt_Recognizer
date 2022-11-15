@@ -15,11 +15,11 @@ namespace BDD_Receipt_Recognizer
 {
     public class BDD_Receipt_Recognizer
     {
-        private ReceiptRecognizer _receiptRecognizer;
+        private IReceiptRecognizer _receiptRecognizer;
         private readonly IMongoRepository<Receipt> _receiptRepository;
         private QueueClient _queueClient;
 
-        public BDD_Receipt_Recognizer(ReceiptRecognizer receiptRecognizer, IMongoRepository<Receipt> receiptRepository, QueueClient queueClient)
+        public BDD_Receipt_Recognizer(IReceiptRecognizer receiptRecognizer, IMongoRepository<Receipt> receiptRepository, QueueClient queueClient)
         {
             _receiptRecognizer = receiptRecognizer;
             _receiptRepository = receiptRepository;
