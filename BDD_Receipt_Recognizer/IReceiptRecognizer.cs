@@ -7,7 +7,7 @@ namespace BDD_Receipt_Recognizer
 {
 	public interface IReceiptRecognizer
 	{
-		Task<List<Receipt>> GetReceiptContents(Stream reciptStream);
+		Task<List<Receipt>> GetReceiptContentsAsync(Stream reciptStream);
 	}
 }
 

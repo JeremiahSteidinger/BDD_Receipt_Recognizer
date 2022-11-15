@@ -16,9 +16,9 @@ namespace BDD_Receipt_Recognizer
 			_documentAnalysisClient = documentAnalysisClient;
 		}
 
-		public async Task<List<Receipt>> GetReceiptContents(Stream reciptStream)
+		public async Task<List<Receipt>> GetReceiptContentsAsync(Stream reciptStream)
 		{
-            AnalyzeDocumentOperation operation = await _documentAnalysisClient.AnalyzeDocumentAsync(WaitUntil.Completed, "prebuild-receipt", reciptStream);
+            AnalyzeDocumentOperation operation = await _documentAnalysisClient.AnalyzeDocumentAsync(WaitUntil.Completed, "prebuilt-receipt", reciptStream);
 
             AnalyzeResult receipts = operation.Value;
 

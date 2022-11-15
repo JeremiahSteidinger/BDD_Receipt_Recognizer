@@ -21,13 +21,13 @@ namespace BDD_Receipt_Recognizer
         public override void Configure(IFunctionsHostBuilder builder)
         {
             #region MongDb
-            MongoDbSettings mongoDbSettings = new MongoDbSettings()
+            IMongoDbSettings mongoDbSettings = new MongoDbSettings()
             {
                 ConnectionString = Environment.GetEnvironmentVariable("MongoDBConnectionString"),
                 DatabaseName = Environment.GetEnvironmentVariable("MongoDBCDatabaseName")
             };
             builder.Services.AddSingleton(mongoDbSettings);
-            builder.Services.AddSingleton(typeof(IMongoRepository<>), typeof(MongoRepository<>));
+            builder.Services.AddSingleton<IMongoRepository<Receipt>, MongoRepository<Receipt>>();
             #endregion
 
             #region Azure Form Recognizer Client

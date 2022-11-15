@@ -32,7 +32,7 @@ namespace BDD_Receipt_Recognizer
         {
             log.LogDebug($"Function running for blob: {name}");
 
-            var receipts = await _receiptRecognizer.GetReceiptContents(receiptBlob);
+            var receipts = await _receiptRecognizer.GetReceiptContentsAsync(receiptBlob);
 
             foreach(Receipt receipt in receipts)
             {
