@@ -15,13 +15,13 @@ namespace BDD_Receipt_Recognizer
 {
     public class BDD_Receipt_Recognizer
     {
-        private DocumentAnalysisClient _documentAnalysisClient;
+        private ReceiptRecognizer _receiptRecognizer;
         private readonly IMongoRepository<Receipt> _receiptRepository;
         private QueueClient _queueClient;
 
-        public BDD_Receipt_Recognizer(DocumentAnalysisClient documentClient, IMongoRepository<Receipt> receiptRepository, QueueClient queueClient)
+        public BDD_Receipt_Recognizer(ReceiptRecognizer receiptRecognizer, IMongoRepository<Receipt> receiptRepository, QueueClient queueClient)
         {
-            _documentAnalysisClient = documentClient;
+            _receiptRecognizer = receiptRecognizer;
             _receiptRepository = receiptRepository;
             _queueClient = queueClient;
         }
@@ -32,9 +32,7 @@ namespace BDD_Receipt_Recognizer
         {
             log.LogDebug($"Function running for blob: {name}");
 
-            ReceiptRecognizer receiptRecognizer = new ReceiptRecognizer(_documentAnalysisClient);
-
-            var receipts = await receiptRecognizer.GetReceiptContents(receiptBlob);
+            var receipts = await _receiptRecognizer.GetReceiptContents(receiptBlob);
 
             foreach(Receipt receipt in receipts)
             {

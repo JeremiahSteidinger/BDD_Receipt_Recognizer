@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BDD_Receipt_Recognizer
 {
-	public class ReceiptRecognizer
+	public class ReceiptRecognizer : IReceiptRecognizer
 	{
 		private DocumentAnalysisClient _documentAnalysisClient;
 

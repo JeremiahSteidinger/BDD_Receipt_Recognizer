@@ -27,7 +27,7 @@ namespace BDD_Receipt_Recognizer
                 DatabaseName = Environment.GetEnvironmentVariable("MongoDBCDatabaseName")
             };
             builder.Services.AddSingleton(mongoDbSettings);
-            builder.Services.AddScoped(typeof(IMongoRepository<>), typeof(MongoRepository<>));
+            builder.Services.AddSingleton(typeof(IMongoRepository<>), typeof(MongoRepository<>));
             #endregion
 
             #region Azure Form Recognizer Client
@@ -36,6 +36,7 @@ namespace BDD_Receipt_Recognizer
             AzureKeyCredential credential = new AzureKeyCredential(key);
 
             builder.Services.AddSingleton(new DocumentAnalysisClient(new Uri(endpoint), credential));
+            builder.Services.AddSingleton<IReceiptRecognizer, ReceiptRecognizer>();
             #endregion
 
             #region Queue Storage
