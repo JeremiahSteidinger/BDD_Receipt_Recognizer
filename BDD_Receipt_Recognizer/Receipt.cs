@@ -12,6 +12,7 @@ namespace BDD_Receipt_Recognizer
         public List<Item> Items { get; set; }
         public double? Total { get; set; }
         public string BlobName { get; set; }
+        public DateTime? DateProcessed { get; set; } = DateTime.UtcNow;
 
         public bool NeedsManualReview()
         {
