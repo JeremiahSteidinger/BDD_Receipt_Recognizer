@@ -40,7 +40,7 @@ namespace BDD_Receipt_Recognizer
 
                 var existingReceipt = await _receiptRepository.FindOneAsync(r => r.BlobName == receipt.BlobName);
 
-                if(existingReceipt != null)
+                if(existingReceipt == null)
                 {
                     await _receiptRepository.InsertOneAsync(receipt);
 
