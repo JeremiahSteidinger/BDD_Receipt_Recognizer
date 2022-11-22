@@ -38,11 +38,16 @@ namespace BDD_Receipt_Recognizer
             {
                 receipt.BlobName = name;
 
-                await _receiptRepository.InsertOneAsync(receipt);
+                var existingReceipt = await _receiptRepository.FindOneAsync(r => r.BlobName == receipt.BlobName);
 
-                if (receipt.NeedsManualReview())
+                if(existingReceipt != null)
                 {
-                    await _queueClient.SendMessageAsync(receipt.Id.ToString());
+                    await _receiptRepository.InsertOneAsync(receipt);
+
+                    if (receipt.NeedsManualReview())
+                    {
+                        await _queueClient.SendMessageAsync(receipt.Id.ToString());
+                    }
                 }
             }
         }
