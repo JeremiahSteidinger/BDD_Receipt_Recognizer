@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
+using BDD.ReceiptRecognizer.Models;
 
 namespace BDD_Receipt_Recognizer
 {

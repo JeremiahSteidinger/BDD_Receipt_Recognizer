@@ -4,6 +4,7 @@ using System.IO;
 using Azure;
 using Azure.AI.FormRecognizer.DocumentAnalysis;
 using System.Threading.Tasks;
+using BDD.ReceiptRecognizer.Models;
 
 namespace BDD_Receipt_Recognizer
 {

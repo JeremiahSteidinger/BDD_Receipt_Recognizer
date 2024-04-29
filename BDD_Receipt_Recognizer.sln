@@ -5,6 +5,14 @@ VisualStudioVersion = 25.0.1704.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BDD_Receipt_Recognizer", "BDD_Receipt_Recognizer\BDD_Receipt_Recognizer.csproj", "{591937FE-AC13-4D5D-82C3-CF88A97F06D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BDD.Data.MongoDB", "BDD.Data.MongoDB\BDD.Data.MongoDB.csproj", "{0113CF07-FA8A-48A6-84D3-9F5085E65772}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BDD.ReceiptRecognizer.Models", "BDD.ReceiptRecognizer.Models\BDD.ReceiptRecognizer.Models.csproj", "{81FCFA1E-7248-4847-AFC9-07BFA9806815}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BDD_Receipt_Recognizer_Bulk_Upload", "BDD_Receipt_Recognizer_Bulk_Upload\BDD_Receipt_Recognizer_Bulk_Upload.csproj", "{8A20AF40-2334-4791-9EDF-CA50B93CEEEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BDD.Data.Entities", "BDD.Data.Entities\BDD.Data.Entities.csproj", "{1DC473C1-B966-442D-917B-73E095922CF7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +23,22 @@ Global
 		{591937FE-AC13-4D5D-82C3-CF88A97F06D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{591937FE-AC13-4D5D-82C3-CF88A97F06D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{591937FE-AC13-4D5D-82C3-CF88A97F06D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0113CF07-FA8A-48A6-84D3-9F5085E65772}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0113CF07-FA8A-48A6-84D3-9F5085E65772}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0113CF07-FA8A-48A6-84D3-9F5085E65772}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0113CF07-FA8A-48A6-84D3-9F5085E65772}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81FCFA1E-7248-4847-AFC9-07BFA9806815}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81FCFA1E-7248-4847-AFC9-07BFA9806815}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81FCFA1E-7248-4847-AFC9-07BFA9806815}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81FCFA1E-7248-4847-AFC9-07BFA9806815}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A20AF40-2334-4791-9EDF-CA50B93CEEEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A20AF40-2334-4791-9EDF-CA50B93CEEEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A20AF40-2334-4791-9EDF-CA50B93CEEEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A20AF40-2334-4791-9EDF-CA50B93CEEEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DC473C1-B966-442D-917B-73E095922CF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DC473C1-B966-442D-917B-73E095922CF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DC473C1-B966-442D-917B-73E095922CF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DC473C1-B966-442D-917B-73E095922CF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
